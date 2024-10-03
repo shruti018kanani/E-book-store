@@ -36,11 +36,11 @@ async function run() {
       res.send(result);
     })
 
-    app.get('/all-books',async(req,res)=>{
-      const books=await bookCollections.find();
-      const result=await books.toArray();
-      res.send(result);
-    })
+    // app.get('/all-books',async(req,res)=>{
+    //   const books=bookCollections.find();
+    //   const result=await books.toArray();
+    //   res.send(result);
+    // })
 
     app.patch('/book/:id',async(req,res)=>{
       const id=req.params.id;
@@ -67,8 +67,17 @@ async function run() {
       res.send(result)
     })
 
-    
+    app.get('/all-books',async(req,res)=>{
+      let query={};
+      if(req.query?.category){
+        query={category:req.query.category}
+      }
+      const result=await bookCollections.find(query).toArray();
+      res.send(result);
+    })
 
+
+    
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
