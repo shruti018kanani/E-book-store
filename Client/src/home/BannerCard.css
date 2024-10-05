@@ -36,8 +36,8 @@ body {
 }
 
 .banner .swiper {
-  width: 240px;
-  height: 320px;
+  width: 300px;
+  height: 450px;
 }
 
 .banner .swiper-slide {
@@ -51,34 +51,32 @@ body {
 }
 
 .banner .swiper-slide:nth-child(1n) {
-  background-color: rgb(206, 17, 17);
+  background-image: url('../assets/Book1.jpg');
 }
 
 .banner .swiper-slide:nth-child(2n) {
-  background-color: rgb(0, 140, 255);
+  background-image: url('../assets/Book2.jpg');
 }
 
 .banner .swiper-slide:nth-child(3n) {
-  background-color: rgb(10, 184, 111);
+  background-image: url('../assets/Book3.jpg');
 }
 
 .banner .swiper-slide:nth-child(4n) {
-  background-color: rgb(211, 122, 7);
+  background-image: url('../assets/Book4.jpg');
 }
 
 .banner .swiper-slide:nth-child(5n) {
-  background-color: rgb(118, 163, 12);
+  background-image: url('../assets/Book5.jpg');
 }
 
 .banner .swiper-slide:nth-child(6n) {
-  background-color: rgb(180, 10, 47);
-}
+  background-image: url('../assets/Book6.jpg');}
 
-.banner .swiper-slide:nth-child(7n) {
-  background-color: rgb(35, 99, 19);
-}
+
 
 .banner .swiper-slide:nth-child(8n) {
-  background-color: rgb(0, 68, 255);
-}
+  background-image: url('../assets/Book8.jpg');}
+
+
 
