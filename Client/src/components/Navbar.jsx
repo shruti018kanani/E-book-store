@@ -34,14 +34,14 @@ const Navbar = () => {
     ]
 
   return (
-    <header className=' w-full bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300'>
-        <nav className={`py-4 lg:px-24 px-4 ${isSticky ? "sticky top-0 left-0 right-0 bg-purple-300":""}`}>
+    <header className=' w-full bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300  '>
+        <nav className={`py-4 lg:px-24 px-4 ${isSticky ? "sticky top-0 left-0 right-0 bg-yellow-600":""}`}>
             <div className='flex justify-between items-center text-base'>
-                <Link to="/" className='text-2xl font-bold text-violet-800 flex items-center gap-2'><FaBlog className=' inline-block'/> Books</Link>
+                <Link to="/" className='text-2xl font-bold text-Black-700 flex items-center gap-2'><FaBlog className=' inline-block'/> Books</Link>
 
                 <ul className='md:flex space-x-12 hidden'>
                     {
-                        navItems.map(({link,path})=><Link key={path} to={path} className=' block text-base text-black uppercase cursor-pointer hover:text-purple-700'>{link}</Link>)
+                        navItems.map(({link,path})=><Link key={path} to={path} className=' block text-base text-black uppercase cursor-pointer hover:text-purple-700  font-semibold font-sans'>{link}</Link>)
                     }
                 </ul>
 
@@ -50,7 +50,7 @@ const Navbar = () => {
                 </div>
 
                 <div className='md:hidden'>
-                    <button onClick={toggleMenu} className='text-black focus:outline-none'>
+                    <button onClick={toggleMenu} className='text-black focus:outline-none'> 
                         {
                             isMenuOpen ? <FaXmark className=' h-5 w-5 text-black'/> : <FaBarsStaggered className=' h-5 w-5 text-black '/>
                         }
